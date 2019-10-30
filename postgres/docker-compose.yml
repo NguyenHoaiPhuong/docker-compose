@@ -1,0 +1,10 @@
+postgresdb:
+    image: postgres:12.0
+    container_name: postgres-120
+    ports:
+      - "5000:5432"
+    volumes:
+      - "/data/dockerdata/postgresdb:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: Babytiger@1345
