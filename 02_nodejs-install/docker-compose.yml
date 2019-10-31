@@ -1,0 +1,4 @@
+# Name of the service
+nodejs-dev:
+  image: node:13.0.1
+  container_name: nodejs-dev
