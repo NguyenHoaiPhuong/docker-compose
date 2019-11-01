@@ -1,11 +1,20 @@
-mongodb-dev:
-    image: mongo:4.2.1
-    container_name: mongo-dev
-    ports:
-      - "27018:27017"
-    command: mongod
-    volumes:
-      - "$PWD/dockerdata/mongodev:/data/db"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: simcel
-      MONGO_INITDB_ROOT_PASSWORD: simcel
+version: "3"
+services:
+  mongodb-dev:
+      image: mongo:4.2.1
+      container_name: mongo-dev
+      ports:
+        - "27018:27017"
+      command: mongod
+      volumes:
+        # - "$PWD/dockerdata/mongodev:/data/db"
+        - "/data/dockerdata/mongodb:/data/mongodb"
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: simcel
+        MONGO_INITDB_ROOT_PASSWORD: simcel
+      networks:
+        - backend
+
+networks:
+  backend:
+    driver: bridge
