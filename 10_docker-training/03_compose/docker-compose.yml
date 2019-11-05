@@ -4,3 +4,4 @@ services:
     container_name: hello-dev
     build: .
     image: hello:3.0
+    command: ./app
