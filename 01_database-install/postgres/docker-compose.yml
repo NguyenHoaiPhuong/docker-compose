@@ -6,5 +6,5 @@ postgresdb:
     volumes:
       - "/data/dockerdata/postgresdb:/var/lib/postgresql/data"
     environment:
-      POSTGRES_USERNAME: postgres
-      POSTGRES_PASSWORD: Babytiger@1345
+      POSTGRES_USERNAME: itv
+      POSTGRES_PASSWORD: itv
